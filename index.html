@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abdul Sami - Click Counter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 40px 30px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      animation: fadeIn 1.2s ease-out forwards;
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #00ffff;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 5px 0;
+    }
+
+    #clickBtn {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+    }
+
+    #clickBtn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 200, 255, 0.5);
+    }
+
+    #counterText {
+      margin-top: 20px;
+      font-size: 1.4rem;
+      color: #ffffff;
+      animation: counterFade 0.3s ease-in-out;
+    }
+
+    @keyframes counterFade {
+      0% { opacity: 0.3; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .highlight {
+      color: #00ffff;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="glass-card">
+    <h1>🧠 JavaScript Task</h1>
+    <p><strong>Name:</strong> <span class="highlight">Abdul Sami</span></p>
+    <p><strong>Roll No:</strong> <span class="highlight">051-21-135515</span></p>
+    <p><strong>Task:</strong> Count how many times a button is clicked and display the count.</p>
+
+    <button id="clickBtn">Click Me!</button>
+    <div id="counterText">You have clicked <span class="highlight">0</span> times.</div>
+
+    <footer>© 2025 Abdul Sami – All Rights Reserved</footer>
+  </div>
+
+  <script>
+    let count = 0;
+    const btn = document.getElementById('clickBtn');
+    const counterText = document.getElementById('counterText');
+
+    btn.addEventListener('click', () => {
+      count++;
+      counterText.innerHTML = `You have clicked <span class="highlight">${count}</span> time${count !== 1 ? 's' : ''}.`;
+      counterText.style.animation = 'none';
+      counterText.offsetHeight; // reset animation
+      counterText.style.animation = null;
+    });
+  </script>
+</body>
+</html>
