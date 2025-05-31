@@ -20,7 +20,7 @@ This is the submission for **Web Development & Engineering - Quiz 3 (JavaScript 
 
 > **Count how many times a button is clicked and display the count.**
 
-This task was completed using **HTML**, **CSS**, and **JavaScript** — all in a single, responsive, animated web page.
+This task was completed using **HTML**, **CSS**, and **JavaScript**.
 
 ---
 
@@ -45,7 +45,7 @@ This task was completed using **HTML**, **CSS**, and **JavaScript** — all in a
 
 ## 🚀 Live Demo
 
-[🔗 Click here to view the live project](https://your-deployment-url.com)  
+[🔗 Click here to view the live project](https://samiaitools.github.io/web-quiz-03/)  
 > _Replace the above link with your actual deployed GitHub Pages / Netlify link._
 
 ---
@@ -71,7 +71,7 @@ This task was completed using **HTML**, **CSS**, and **JavaScript** — all in a
 For any queries:  
 **Abdul Sami**  
 Roll No: 051-21-135515  
-[Email Placeholder]
+aitoolslg@gmail.com
 
 ---
 
